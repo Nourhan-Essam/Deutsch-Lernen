@@ -1,4 +1,4 @@
-# 🎀 Deutsch Lernen - Running Quiz Game 💖✨
+# 🎀 Deutsch Lernen - Running Quiz Game 💖😇
 
 A fun, interactive, and cute web application built with HTML, CSS, and pure JavaScript to help users learn German! Inspired by the dodge/running button meme, the wrong answer runs away when you try to hover or click on it, encouraging users to pick the right option! 😉
 
@@ -34,4 +34,4 @@ A fun, interactive, and cute web application built with HTML, CSS, and pure Java
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/YOUR_USERNAME/german-running-quiz.git](https://github.com/YOUR_USERNAME/german-running-quiz.git)
+   git clone [https://github.com/Nourhan-Essam/Deutsch-Lernen.git]
