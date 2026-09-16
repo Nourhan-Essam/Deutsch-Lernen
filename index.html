@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deutsch Lernen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Setup Screen -->
+    <div id="setupScreen">
+      <div class="flag-badge">
+        <span class="bow-icon">🎀</span>
+        <span>just a girl learning german 💅</span>
+      </div>
+      <h2>Frage Erstellen</h2>
+      <p class="subtitle">Enter your German question and answer choices</p>
+
+      <div class="form-group" style="margin-top: 20px;">
+        <label>German Question (Frage)</label>
+        <input type="text" id="questionInput" placeholder="e.g., Was heißt 'Thank you' auf Deutsch?">
+      </div>
+
+      <div class="form-group">
+        <label>Correct Answer (Richtig)</label>
+        <input type="text" id="correctInput" placeholder="e.g., Danke!">
+      </div>
+
+      <div class="form-group">
+        <label>Wrong Answer (Dodging Button)</label>
+        <input type="text" id="wrongInput" placeholder="e.g., Bitte">
+      </div>
+
+      <div class="btn-group">
+        <button class="btn btn-secondary" onclick="addQuestion()">➕ Add Question</button>
+        <button class="btn btn-primary" onclick="startGame()">🚀 Start Quiz (<span id="qCount">0</span>)</button>
+      </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="gameScreen" class="hidden">
+      <div class="flag-badge">
+        <span class="bow-icon">🎀</span>
+        <span id="questionProgress">Frage 1 von 1</span>
+      </div>
+
+      <h2 id="displayQuestion" style="margin-top: 10px;">Question...</h2>
+      <p class="subtitle" id="hintText">Versuch die falsche Antwort zu klicken! 😉</p>
+
+      <div class="game-area">
+        <button id="correctBtn" onclick="handleCorrectAnswer()">Ja</button>
+        <button id="wrongBtn" onmouseover="dodgeButton()" onclick="dodgeButton()">Nein</button>
+      </div>
+    </div>
+
+    <!-- Success Screen -->
+    <div id="successScreen" class="hidden success-card">
+      <div style="font-size: 50px; margin-bottom: 10px;">🎀 😇 🎉</div>
+      <h2>Unglaublich!!</h2>
+      <p style="color: var(--text-muted); margin: 15px 0 25px 0;">Du hast die richtige Antwort gewählt? Wow, ich bin beeindruckt!😇</p>
+      <button class="btn btn-primary" style="width: 100%;" onclick="resetToSetup()">Neues Quiz Erstellen 🎈</button>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
